@@ -1,0 +1,9 @@
+### Register user
+POST https://localhots:3000/user/register
+Content-Type: application/json
+
+{
+    "name": "Eduardo Carvalho",
+    "email": "edu@edu.com",
+    "description": "Tests"
+}
