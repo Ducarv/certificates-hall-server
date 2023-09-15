@@ -1,3 +1,4 @@
+import { CheckUserCreation } from "../../../providers/CheckUserCreation";
 import { CreateUserController } from "./CreateUserController";
 import { CreateUserRepository } from "./CreateUserRepository";
 import { CreateUserService } from "./CreateUserService";
@@ -5,7 +6,8 @@ import { CreateUserService } from "./CreateUserService";
 const createUserRepository = new CreateUserRepository()
 
 const createUserService = new CreateUserService(createUserRepository);
+const checkUserCreation = new CheckUserCreation()
 
-const createUserController = new CreateUserController(createUserService);
+const createUserController = new CreateUserController(createUserService, checkUserCreation);
 
 export { createUserController }

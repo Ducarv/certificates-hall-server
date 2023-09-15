@@ -3,6 +3,6 @@ POST http://localhost:8080/user/register
 content-type: application/json
 
 {
-    "name": "eduardo",
-    "email": "Edu@edu.com"
+    "name": "Jose",
+    "email": "ze@email.com"
 }

@@ -21,8 +21,8 @@ describe("CreateUser", async () => {
 
         try {
             await createUserMock.create({ ...testUser });
-        } catch(err) {
-            expect((err as Error).message).toBe("error to create user");
+        } catch(err: any) {
+            expect(err .message).toBe("error to create user");
         }
     })
 
