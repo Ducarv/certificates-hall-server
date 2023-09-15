@@ -15,4 +15,20 @@ describe("CreateUser", async () => {
         const su = await createUserMock.create({ ...testUser });
         expect(su).toStrictEqual({ ...testUser, id: "12345"})
     })
+
+    it("should handle user creation failure", async () => {
+        createUserMock.create.mockRejectedValue(new Error("error to create user"));
+
+        try {
+            await createUserMock.create({ ...testUser });
+        } catch(err) {
+            expect((err as Error).message).toBe("error to create user");
+        }
+    })
+
+    it("should call createUserRepository.create with correct arguments", async () => {
+        createUserMock.create.mockResolvedValue({ ...testUser, id: "12345" });
+        await createUserMock.create({ ...testUser });
+        expect(createUserMock.create).toHaveBeenCalledWith({ ...testUser });
+    })
 })
