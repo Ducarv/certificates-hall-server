@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { CreateUserDTO } from '../CreateUser/CreateUser.dto';
 import { createUserMock } from '../../../providers/__mocks__/CreateUser';
 
-vi.mock("../CreateUser")
+vi.mock("../CreateUser/CreateUserRepository")
 
 describe("CreateUser", async () => {
     const testUser: CreateUserDTO = {

@@ -6,3 +6,11 @@ content-type: application/json
     "name": "Joao",
     "email": "jao@email.com"
 }
+
+### LOGIN USER
+POST http://localhost:8080/user/login
+content-type: application/json
+
+{
+    "email": "jao@email.com"
+}
