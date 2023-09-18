@@ -14,3 +14,11 @@ content-type: application/json
 {
     "email": "jao@email.com"
 }
+
+### LOGOUT USER
+PUT http://localhost:8080/user/logout 
+content-type: application/json
+
+{
+    "id": "88033fe9-e5a5-44cc-a426-a0573a5eadf5"
+}
