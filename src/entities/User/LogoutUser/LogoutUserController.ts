@@ -7,7 +7,7 @@ export class LogoutUserController {
     ) {};
 
     public async handle(request: Request, response: Response): Promise<Response | any> {
-        const { id } = request.body;
+        const { id } = request.params;
 
         try {
             const user = await this.logoutUserService.execute({ id });

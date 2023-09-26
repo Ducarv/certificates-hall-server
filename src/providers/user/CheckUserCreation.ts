@@ -1,4 +1,4 @@
-import { prisma } from "./prisma/prismaService";
+import { prisma } from "../prisma/prismaService";
 
 interface userCheck {
   email: string;

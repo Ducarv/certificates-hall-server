@@ -12,13 +12,11 @@ export class LoginUserController {
         try {
             const user = await this.loginUserService.execute({ email });
 
-            if (user) {
-              return response.status(200).json({ message: "Login successfully", user });
+            if (!user) {
+              return response.status(401).json({ message: "User not found" });
             }
 
-            if (!user) {
-              return response.status(404).json({ message: "User not found" });
-            }
+            return response.status(200).json({ message: "Login successfully", user });
         } catch(error: any) {
             return response.status(500).json({ message: `Internal Server error! ${error.message}`});
         }

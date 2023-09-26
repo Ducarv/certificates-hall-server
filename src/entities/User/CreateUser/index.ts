@@ -1,4 +1,4 @@
-import { CheckUserCreation } from "../../../providers/CheckUserCreation";
+import { CheckUserCreation } from "../../../providers/user/CheckUserCreation";
 import { CreateUserController } from "./CreateUserController";
 import { CreateUserRepository } from "./CreateUserRepository";
 import { CreateUserService } from "./CreateUserService";
